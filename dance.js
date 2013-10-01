@@ -92,7 +92,7 @@ function startAnimation() {
 //Запускаем единый таймер
   setInterval(function() {                    
     var img = new Image();                        
-    img.src = 'http://alt1040.hipertextual.com/files/2012/02/Fondo-pasto-800x600.jpg';
+    img.src = 'http://img806.imageshack.us/img806/8718/bigbrothertileinteracti.png';
     //Чистим сцену
     ctx.save();
     ctx.drawImage(img,0,0,ctxW,ctxH);
@@ -165,11 +165,14 @@ function startAnimation() {
     }
   }, 1000/16);
 }
-var ctx  = $('cnv').getContext('2d');        
-var childs  = {};                     //Массив объектов сцены
-var animate = {};                     //Массив анимаций для объектов 
-var ctxH = $("cnv").height
-var ctxW = $("cnv").width;         
-initAnimation();
-startAnimation();
-
+//window.onload = function(){
+  var ctx  = $('cnv').getContext('2d');   
+  ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;     
+  var childs  = {};                     //Массив объектов сцены
+  var animate = {};                     //Массив анимаций для объектов 
+  var ctxH = window.innerHeight;
+  var ctxW = window.innerWidth;         
+  initAnimation();
+  startAnimation();
+//}
